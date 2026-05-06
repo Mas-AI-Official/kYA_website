@@ -1,0 +1,21 @@
+# Cloudflare Pages config for KYA Mission Control
+# Deployed via @cloudflare/next-on-pages (compiles Next.js Edge to a Worker bundle).
+#
+# One-time setup (after `wrangler login`):
+#   npm run cf:build && npm run cf:deploy
+#
+# CI deploys are configured separately when the user connects the GitHub repo
+# in the Cloudflare Pages dashboard — preserves preview deploys per PR.
+
+name = "kya-mission-control"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Production environment variable bindings.
+# Real values are set via `wrangler pages secret put <KEY>` (encrypted at rest).
+[vars]
+# Public, build-time vars go here. Secrets do NOT. Empty for now.
+
+# [env.production]
+# Use Pages dashboard or `wrangler pages deployment create` for env-specific overrides.
