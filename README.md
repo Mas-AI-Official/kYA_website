@@ -1,63 +1,165 @@
-# KYA Mission Control — Landing Page
+<div align="center">
 
-The marketing site for **KYA Mission Control by MAS-AI** — trust infrastructure for autonomous AI agents.
+<img src="public/kya-logo.png" alt="KYA Mission Control" width="200" />
 
-> **Live target:** `kya.mas-ai.co`
-> **Repo:** [github.com/Mas-AI-Official/kYA_website](https://github.com/Mas-AI-Official/kYA_website)
-> **Live Mission Lab:** <https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/>
+# KYA Mission Control
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website&project-name=kya-mission-control&repository-name=kya_website&framework=nextjs&env=RESEND_API_KEY,WAITLIST_NOTIFY_TO,WAITLIST_FROM,SLACK_WEBHOOK_URL,WAITLIST_WEBHOOK_URL&envDescription=All%20optional%20%E2%80%94%20form%20works%20without%20any.%20See%20.env.example.&envLink=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website%2Fblob%2Fmain%2F.env.example)
+### Trust infrastructure for autonomous AI agents
 
----
+*Verifies who owns an agent · what it’s allowed to do · creates an auditable record before it acts, spends, transacts, or represents a business.*
 
-## Stack
+[![License](https://img.shields.io/badge/License-Apache%202.0-D4A843?style=for-the-badge)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.4-2DD4BF?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Live Lab](https://img.shields.io/badge/Live%20Lab-Cloud%20Run-2DD4BF?style=for-the-badge)](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/)
 
-- **Next.js 15** (App Router, Server Components by default)
-- **React 19** (RC)
-- **Tailwind CSS 3.4** with custom MAS-AI palette (slate / gold / teal)
-- **Framer Motion** for scroll-reactive animations
-- **Lucide React** icons
-- **TypeScript 5.6**
+[**Live Mission Lab →**](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/) · [**Product repo →**](https://github.com/Mas-AI-Official/KYA_Mission_Control) · [**MAS-AI →**](https://mas-ai.co)
+
+</div>
 
 ---
 
-## Run locally
+> **Other tools control a tool call. We control the whole mission lifecycle.**
+
+This is the marketing site for **KYA Mission Control by MAS-AI Technologies Inc.** — the trust and execution layer for AI agent missions. Birth certificate to signed receipt across MCP, APIs, browsers, and payment rails.
+
+The site is built to feel like the product: **dark, technical, mission-control**. No cartoon robots, no generic AI gradients, no hype. Cards, dashboards, glow, grid lines, motion — exactly enough.
+
+---
+
+## ✨ What you’ll see on the page
+
+| Section | What it does |
+|---|---|
+| **Hero** | Simulated mission-control dashboard — agent passport · trust meter (animated SVG) · multi-dimensional budget bars · 5-child lineage tree with animated dataflow · 9-step audit timeline · Ed25519-verified anchor strip |
+| **Killer line** | *“Other tools control a tool call. We control the whole mission lifecycle.”* — full-bleed strip with gold-radial glow |
+| **Problem** | Five questions every CISO is about to ask, five answers no one ships |
+| **Product** | Eight primitives — agent identity registry, ownership verification, permission policies, risk scoring, audit logs, compliance reports, platform API, reputation |
+| **How it works** | Five-step mission lifecycle + a 5-line SDK preview that wraps any LangChain / Anthropic Tools / OpenAI Assistants agent |
+| **Architecture** | Owner → Entity → Agent → Mission Policy Engine → Surfaces → Audit Ledger block diagram |
+| **Live Mission Lab** | **9 scenario cards deep-linked to a running Cloud Run console** — admit / block / checkpoint / verify, on real RFC 9421 signed requests |
+| **Use cases** | Marketplaces, SaaS, fintech, enterprise, freelance, AI insurance |
+| **Why now** | Standards rush · distribution moment · production pain |
+| **Comparison** | KYA vs AWS AgentCore vs Cloudflare WBA vs ERC-8004 |
+| **Founder + Daena traction** | 10 departments × 60 capabilities × 3,086 tests · customer-zero on day one |
+| **Waitlist** | `/api/waitlist` Edge route with Resend / Slack / webhook fan-out |
+
+The whole page is **server-rendered, fully responsive, scroll-reactive** (parallax glow orbs + drifting grid + descending scanline), and respects `prefers-reduced-motion`.
+
+---
+
+## 🧪 Try the live demo (no signup, no install)
+
+The hero section deep-links into our running **Mission Lab** on Cloud Run. Click any card to open it on the right scenario:
+
+| # | Scenario | Outcome | Question it answers |
+|--:|---|---|---|
+| 1 | [Verified mission](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=verified-success) | ✅ Admit | What does a green-light mission look like? |
+| 2 | [No passport](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=no-passport) | ❌ Block | Which agent is this — and who owns it? |
+| 3 | [Revoked passport](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=revoked-passport) | ❌ Block | How do I kill a key after it leaks? |
+| 4 | [Child scope escalation](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=child-escalation) | ❌ Block | What authority can a child claim? |
+| 5 | [Budget exceeded](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=budget-exceeded) | ⏸️ Checkpoint | How much has it spent on what? |
+| 6 | [High-risk action](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=high-risk) | ⏸️ Checkpoint | What needs a human signature? |
+| 7 | [Stuck browser](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=stuck-browser) | ⏸️ Checkpoint | How do I stop a wedged agent? |
+| 8 | [Replay blocked](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=replay-blocked) | ❌ Block | Can a captured request be reused? |
+| 9 | [Verify offline](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/?scenario=verify-receipt) | 🔐 Verify | Can I prove this tomorrow without your servers? |
+
+Every click runs against a real FastAPI service, real Ed25519 keys, the real 12-state mission engine. The receipts are downloadable and offline-verifiable.
+
+---
+
+## 🚀 Quick start
+
+**Prerequisites:** Node.js ≥ 18.
 
 ```bash
+git clone https://github.com/Mas-AI-Official/kYA_website.git
+cd kYA_website
 npm install
 npm run dev
 ```
 
 Open <http://localhost:3000>.
 
-## Build & deploy
-
-```bash
-npm run build
-npm run start          # production server on :3000
-```
-
-Deploy targets that work out of the box:
-
-- **Cloudflare Pages** — `npm run cf:deploy` (after `npx wrangler login`).
-- **Vercel** — `npx vercel --prod`, or click the Deploy button above.
-- **Netlify** — set build command to `npm run build`, publish directory to `.next`.
+The waitlist form on `#join-beta` works locally without any env vars — submissions are written to `console.log` (and to the browser’s `localStorage` as a defensive backup).
 
 ---
 
-## Project structure
+## 🏗️ Architecture (one glance)
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                         BROWSER (visitor)                            │
+│         dark slate · gold · teal · framer-motion scroll FX           │
+└────────────────────────────────┬─────────────────────────────────────┘
+                                 │
+                                 ▼
+┌──────────────────────────────────────────────────────────────────────┐
+│                 Next.js 14 (App Router · static + Edge)              │
+│ ─────────────────────────────────────────────────────────────────── │
+│  /  ......... statically prerendered (SEO-friendly, LCP < 1.5s)      │
+│  /api/waitlist .. Edge runtime function (V8 isolate, ~5ms cold)      │
+└────────────────────────────────┬─────────────────────────────────────┘
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        ▼                        ▼                        ▼
+┌──────────────┐         ┌──────────────┐        ┌──────────────────┐
+│   RESEND     │         │    SLACK     │        │  WEBHOOK (any)   │
+│ HTML email   │         │ Channel ping │        │ Zapier / Notion  │
+│  (optional)  │         │  (optional)  │        │   (optional)     │
+└──────────────┘         └──────────────┘        └──────────────────┘
+                                 │
+                                 ▼
+                       ┌────────────────────┐
+                       │   stdout JSON log  │
+                       │   (always)         │
+                       └────────────────────┘
+                       Vercel / Cloudflare Logs surface these
+```
+
+`/api/waitlist` validates → checks honeypot → checks rate-limit (1/IP/min, **after** validation so a typo doesn’t lock you out) → fans out to all configured providers via `Promise.all`. **Every provider is optional.** The form succeeds with zero configuration.
+
+---
+
+## 🎨 Design system
+
+| Token | Value | Used for |
+|---|---|---|
+| Background | `#05080B` ink + layered radial gradients | Page base |
+| Slate 900 | `#0F1419` | Panel surfaces |
+| Slate 800 | `#1A2129` | Raised cards |
+| **Gold** | **`#D4A843`** | Primary CTA, brand mark, "admit" signals |
+| **Teal** | **`#2DD4BF`** | Secondary accents, "verify" signals |
+| Signal green | `#34D399` | Policy PASS, success |
+| Signal amber | `#FBBF24` | Checkpoint pending, warning |
+| Signal red | `#F87171` | Block, deny |
+| Signal blue | `#60A5FA` | Human-loop signal |
+| Display | Inter | Headings, dashboard text |
+| Mono | JetBrains Mono | Code, IDs, addresses |
+
+**Animation language:** parallax glow orbs that drift with scroll · drifting grid · descending scanline · staggered card reveals · animated trust-meter SVG · audit-trail line-by-line. All motion respects `prefers-reduced-motion`.
+
+---
+
+## 📁 Project structure
 
 ```
 .
+├── public/
+│   ├── kya-logo.png            # Brand mark (gold-on-black)
+│   └── favicon.svg
 ├── src/
 │   ├── app/
-│   │   ├── globals.css         # Tailwind + custom CSS (grid, glow, scanlines)
-│   │   ├── layout.tsx          # Root layout, fonts, metadata
+│   │   ├── api/
+│   │   │   └── waitlist/
+│   │   │       └── route.ts    # Edge function: validation + fan-out
+│   │   ├── globals.css         # Tailwind + glow / grid / scanline
+│   │   ├── layout.tsx          # Root layout, metadata, OG
 │   │   └── page.tsx            # Composed landing page
 │   ├── components/
-│   │   ├── AnimatedBackground.tsx   # Scroll-reactive background (orbs + grid + scanline)
-│   │   ├── MissionDashboard.tsx     # Simulated mission-control dashboard (hero visual)
-│   │   ├── Nav.tsx                  # Sticky top nav
+│   │   ├── AnimatedBackground.tsx     # Scroll-reactive orbs + grid
+│   │   ├── MissionDashboard.tsx       # Hero dashboard simulation
+│   │   ├── Nav.tsx                    # Sticky nav with KYA mark
 │   │   ├── Footer.tsx
 │   │   └── sections/
 │   │       ├── Hero.tsx
@@ -65,6 +167,7 @@ Deploy targets that work out of the box:
 │   │       ├── Product.tsx
 │   │       ├── HowItWorks.tsx
 │   │       ├── Architecture.tsx
+│   │       ├── LiveLab.tsx            # 9 deep-linked scenario cards
 │   │       ├── UseCases.tsx
 │   │       ├── WhyNow.tsx
 │   │       ├── Comparison.tsx
@@ -72,119 +175,128 @@ Deploy targets that work out of the box:
 │   │       └── CTA.tsx
 │   └── lib/
 │       └── cn.ts
-├── public/
-│   └── favicon.svg
-├── tailwind.config.ts
+├── .env.example                # All optional providers documented
 ├── next.config.mjs
-├── postcss.config.mjs
+├── package.json
+├── tailwind.config.ts          # MAS-AI palette + animations
 ├── tsconfig.json
-└── package.json
+├── vercel.json                 # Security headers + Edge cache
+└── wrangler.toml               # Cloudflare Pages config
 ```
 
 ---
 
-## Design system
+## 🚢 Deploy
 
-| Token | Value |
-|---|---|
-| Background | `#05080B` ink, layered radial gradients |
-| Slate | `#0F1419` (panel), `#1A2129` (raised), `#252E39` (hover) |
-| Gold | `#D4A843` (primary CTA, brand mark) |
-| Teal | `#2DD4BF` (secondary accents, status-good) |
-| Signal | `#34D399` green · `#FBBF24` amber · `#F87171` red · `#60A5FA` blue |
-| Display font | Inter |
-| Mono font | JetBrains Mono |
+### A · Cloudflare Pages (recommended)
 
-Animation language: **scroll-reactive parallax glow orbs · drifting grid · descending scanline · staggered card reveals**. All motion respects `prefers-reduced-motion`.
-
----
-
-## Sections
-
-1. **Hero** — headline + simulated mission dashboard (Agent Passport, Trust Score, Budget meter, Lineage tree, Audit trail, Anchor strip)
-2. **Killer line strip** — "Other tools control a tool call. We control the whole mission lifecycle."
-3. **Problem** — 5 missing primitives (the questions every CISO is about to ask)
-4. **Product** — 8 features in a 4-column grid
-5. **How it works** — 5-step horizontal flow + SDK code preview
-6. **Architecture** — visual block diagram (Owner → Entity → Agent → Policy Engine → Surfaces → Audit Ledger)
-7. **Use cases** — 6 personas (marketplaces, SaaS, fintech, enterprise, freelance platforms, insurance)
-8. **Why now** — 3 columns (standards rush · distribution moment · production pain)
-9. **Comparison** — KYA vs AWS AgentCore · Cloudflare WBA · ERC-8004
-10. **Founder** — Masoud Masoori bio + Daena customer-zero traction
-11. **CTA** — private-beta waitlist form (frontend-only; persists to localStorage with TODO marker for backend)
-12. **Footer** — product / company / legal columns
-
----
-
-## Waitlist backend (already wired)
-
-The form at `#join-beta` posts to `/api/waitlist` (Edge runtime). The route:
-
-- Validates payload (name + email required, email regex)
-- Honeypot anti-spam (hidden `website` field; bots fill it, we silently 200)
-- Per-IP rate limit (1 request / minute)
-- Always logs structured JSON to stdout — visible in Vercel Logs
-- Optionally fans out to **Resend**, **Slack**, and a **generic webhook** when env vars are set
-
-### Light up notifications (optional)
-
-Copy `.env.example` to `.env.local` for dev, or set in Vercel Project Settings:
-
-```bash
-RESEND_API_KEY=re_xxx
-WAITLIST_NOTIFY_TO=hello@mas-ai.co
-WAITLIST_FROM=KYA Waitlist <noreply@mas-ai.co>   # verified domain in Resend
-
-SLACK_WEBHOOK_URL=https://hooks.slack.com/...    # optional
-
-WAITLIST_WEBHOOK_URL=https://hooks.zapier.com/...  # optional
-```
-
-The form works **without any of these** — submissions land in `console.log` and surface in Vercel's Logs tab. Add keys when you're ready.
-
-## Deploy
-
-### Option A — Cloudflare Pages (recommended; same provider as your DNS)
+Same provider as your DNS, free tier covers anything this site will see, and the Edge `/api/waitlist` runs as a Cloudflare Worker bundle for free.
 
 ```bash
 npx wrangler login            # one-time, opens browser
-npm run cf:deploy             # builds via @cloudflare/next-on-pages and deploys
+npm run cf:deploy             # builds via @cloudflare/next-on-pages and uploads
 ```
 
-The Edge `/api/waitlist` route is compiled to a Cloudflare Worker bundle and served from the same domain. After the first deploy:
+After the first deploy:
 
-1. Cloudflare Dashboard → Pages → `kya-mission-control` → Custom Domains → add `kya.mas-ai.co`
-   (the CNAME is already set on the `mas-ai.co` zone — Cloudflare auto-validates and provisions SSL)
-2. Settings → Environment Variables → paste any of: `RESEND_API_KEY`, `WAITLIST_NOTIFY_TO`, `WAITLIST_FROM`, `SLACK_WEBHOOK_URL`, `WAITLIST_WEBHOOK_URL`
+1. **Cloudflare Dashboard → Pages → `kya-mission-control` → Custom Domains** — enter `kya.mas-ai.co`. The CNAME is already set on the `mas-ai.co` zone, so Cloudflare validates and issues the TLS cert in ~30 s.
+2. **Settings → Environment Variables** — paste any of:
 
-### Option B — Vercel
+   | Var | Effect |
+   |---|---|
+   | `RESEND_API_KEY` + `WAITLIST_NOTIFY_TO` | Branded HTML email per signup |
+   | `WAITLIST_FROM` | Override `From:` (default uses Resend onboarding) |
+   | `SLACK_WEBHOOK_URL` | Instant Slack channel ping |
+   | `WAITLIST_WEBHOOK_URL` | Forward raw JSON to Zapier / n8n / Notion |
 
+   See [`.env.example`](.env.example).
+
+### B · Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website&project-name=kya-mission-control&repository-name=kya_website&framework=nextjs&env=RESEND_API_KEY,WAITLIST_NOTIFY_TO,WAITLIST_FROM,SLACK_WEBHOOK_URL,WAITLIST_WEBHOOK_URL&envDescription=All%20optional%20%E2%80%94%20form%20works%20without%20any.%20See%20.env.example.&envLink=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website%2Fblob%2Fmain%2F.env.example)
+
+Or via CLI:
 ```bash
-npx vercel login           # one-time
+npx vercel login
 npx vercel --prod
 ```
 
-Or click-deploy: <https://vercel.com/new/clone?repository-url=https://github.com/Mas-AI-Official/kYA_website&project-name=kya-mission-control>
+After deploy: Project Settings → Domains → add `kya.mas-ai.co` → add the DNS record Vercel shows (or keep the existing CNAME; both work).
 
-After first deploy:
-1. Vercel Project Settings → Domains → add `kya.mas-ai.co`
-2. Add the DNS records Vercel shows you to your `mas-ai.co` zone
-3. Set env vars in Project Settings → Environment Variables (see `.env.example`)
+### C · Netlify / Self-hosted
 
----
+```bash
+npm run build && npm run start
+```
 
-## Performance budget
-
-- Lighthouse target: **>95**
-- LCP target: **<1.5s**
-- Zero third-party trackers
-- All fonts via `next/font` (self-hosted, swap)
-- All images and icons inline SVG (no external requests)
+Outputs `/.next` (server) — wire to any Node host, or `next export` if you don’t need the API route.
 
 ---
 
-## License
+## 🛡️ Waitlist API contract
 
-Apache 2.0. © 2026 MAS-AI Technologies Inc.
+`POST /api/waitlist`
 
-Founder: Masoud Masoori · `masoud.masoori@mas-ai.co` · Toronto, ON.
+```json
+{
+  "name":     "Jane Doe",       // required
+  "email":    "jane@acme.com",  // required, RFC-ish regex
+  "company":  "ACME Agents",    // optional
+  "use_case": "Procurement bot needs receipts",  // optional, ≤ 4000 chars
+  "website":  ""                // honeypot — must be empty
+}
+```
+
+**Responses:**
+
+| Status | Meaning |
+|--:|---|
+| `200 {ok:true, delivered:{resend, slack, webhook}}` | Accepted; per-provider booleans show what fired |
+| `200 {ok:true}` | Honeypot tripped (silent — no slot consumed) |
+| `400 {error:"missing_fields"}` | name or email blank |
+| `400 {error:"invalid_email"}` | email failed regex |
+| `400 {error:"invalid_json"}` | body not valid JSON |
+| `429 {error:"rate_limited", retry_after_s}` | > 1 request from this IP this minute |
+| `405 {error:"method_not_allowed"}` | not a POST |
+
+Validation runs **before** rate-limiting so a typo doesn’t burn your slot. Honeypot bots are silently 200’d so they don’t retry.
+
+---
+
+## 📈 Performance
+
+| Metric | Target | Measured |
+|---|---|---|
+| First Load JS | < 200 kB | **154 kB** |
+| LCP | < 1.5 s | (depends on host) |
+| Lighthouse | > 95 | (run yours) |
+| Third-party trackers | 0 | **0** |
+| External font requests | 0 | **0** (system stack) |
+
+---
+
+## 🤝 Contributing
+
+This is the marketing site. The product itself lives at **[`Mas-AI-Official/KYA_Mission_Control`](https://github.com/Mas-AI-Official/KYA_Mission_Control)** (Apache 2.0, mission state machine + receipt spec + lab demo).
+
+If you spot a copy bug, a typo, or a layout issue here, open an issue or a PR — anything that makes the site sharper is welcome. For product feedback (the protocol, the receipt format, the lab scenarios), open issues on the product repo.
+
+---
+
+## 📝 License
+
+**Apache 2.0** — see [LICENSE](LICENSE).
+
+© 2026 MAS-AI Technologies Inc. · Toronto, Ontario, Canada
+
+---
+
+<div align="center">
+
+**Built by [Masoud Masoori](https://www.linkedin.com/in/masoud-masoori) · MAS-AI Technologies Inc.**
+
+[mas-ai.co](https://mas-ai.co) · [hello@mas-ai.co](mailto:hello@mas-ai.co) · [security@mas-ai.co](mailto:security@mas-ai.co)
+
+*Two patents pending: Sunflower-Honeycomb Memory Architecture · Neural-Backed Memory Fabric (NBMF)*
+
+</div>
