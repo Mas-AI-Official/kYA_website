@@ -10,7 +10,9 @@
     "lint": "next lint",
     "cf:build": "npx @cloudflare/next-on-pages@latest",
     "cf:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
-    "cf:deploy": "npm run cf:build && npx wrangler pages deploy .vercel/output/static --project-name=kya-mission-control --commit-dirty=true"
+    "cf:deploy": "npm run cf:build && npx wrangler pages deploy .vercel/output/static --project-name=kya-mission-control --commit-dirty=true",
+    "gcp:deploy": "bash deploy.sh",
+    "gcp:deploy:remote": "gcloud builds submit --config=cloudbuild.yaml --substitutions=SHORT_SHA=$(git rev-parse --short HEAD)"
   },
   "dependencies": {
     "next": "14.2.18",

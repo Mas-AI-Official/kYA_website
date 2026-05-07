@@ -11,6 +11,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-D4A843?style=for-the-badge)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3.4-2DD4BF?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Cloud Run](https://img.shields.io/badge/deploy-Cloud%20Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)](#b-google-cloud-run)
 [![Live Lab](https://img.shields.io/badge/Live%20Lab-Cloud%20Run-2DD4BF?style=for-the-badge)](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/)
 
 [**Live Mission Lab →**](https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/) · [**Product repo →**](https://github.com/Mas-AI-Official/KYA_Mission_Control) · [**MAS-AI →**](https://mas-ai.co)
@@ -211,7 +212,36 @@ After the first deploy:
 
    See [`.env.example`](.env.example).
 
-### B · Vercel
+### B · Google Cloud Run
+
+Containerized Next.js (standalone output) on a serverless region in Toronto. Same region as Daena, scale-to-zero, ~150 MB image, sub-second cold starts.
+
+```bash
+# One-time:
+gcloud auth login
+gcloud config set project mas-ai-kya
+
+# Build + push + deploy + smoke-test (one shot):
+npm run gcp:deploy
+```
+
+The script:
+1. Enables `run.googleapis.com` + `artifactregistry.googleapis.com` (no-op if already on)
+2. Creates the Artifact Registry repo `kya-website` in `northamerica-northeast1` (idempotent)
+3. Builds the multi-stage `Dockerfile` and tags with `<version>-<git-sha>` + `latest`
+4. Pushes both tags
+5. Deploys to Cloud Run service `kya-website` (cpu=1, memory=512Mi, concurrency=80, scale-to-zero)
+6. Curls the live URL + the honeypot path on `/api/waitlist` to confirm it works
+
+**No local Docker?** Use Cloud Build instead — same result, runs entirely on Google's side:
+
+```bash
+npm run gcp:deploy:remote
+```
+
+After deploy, attach the custom domain in **Cloud Run → kya-website → Custom Domains** (this also issues a managed cert), or update your Cloudflare CNAME from `kya-mission-control.pages.dev` to `ghs.googlehosted.com` (Cloud Run's domain-mapping target).
+
+### C · Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website&project-name=kya-mission-control&repository-name=kya_website&framework=nextjs&env=RESEND_API_KEY,WAITLIST_NOTIFY_TO,WAITLIST_FROM,SLACK_WEBHOOK_URL,WAITLIST_WEBHOOK_URL&envDescription=All%20optional%20%E2%80%94%20form%20works%20without%20any.%20See%20.env.example.&envLink=https%3A%2F%2Fgithub.com%2FMas-AI-Official%2FkYA_website%2Fblob%2Fmain%2F.env.example)
 
@@ -223,7 +253,7 @@ npx vercel --prod
 
 After deploy: Project Settings → Domains → add `kya.mas-ai.co` → add the DNS record Vercel shows (or keep the existing CNAME; both work).
 
-### C · Netlify / Self-hosted
+### D · Netlify / Self-hosted
 
 ```bash
 npm run build && npm run start
