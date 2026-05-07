@@ -5,9 +5,9 @@ type Link = readonly [string, string];
 
 const product: Link[] = [
   ["Live Mission Lab", "https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/"],
-  ["4-Agent showcase", "https://kya-mission-lab-szw3mq5rma-nn.a.run.app/console/gate/?auto=1"],
   ["API docs", "https://kya-mission-lab-szw3mq5rma-nn.a.run.app/docs"],
   ["GitHub repo", "https://github.com/Mas-AI-Official/KYA_Mission_Control"],
+  ["Receipt spec", "https://github.com/Mas-AI-Official/KYA_Mission_Control/blob/main/spec/kya-mission-receipt-spec.md"],
 ];
 
 const company: Link[] = [
