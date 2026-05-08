@@ -34,8 +34,11 @@ out
 # Docs (internal-only)
 docs
 
-# Source-of-truth assets at root (logo lives at public/kya-logo.png)
-KYA-LOGO.png
+# Source-of-truth assets at root (logo lives at public/kya-logo.png).
+# Leading slash anchors to build-context root — without it, Docker's
+# case-insensitive matching on Windows would also exclude public/kya-logo.png.
+/KYA-LOGO.png
+/masoud pic.jpg
 
 # Misc
 *.log
