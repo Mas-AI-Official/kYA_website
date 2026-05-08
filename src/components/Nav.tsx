@@ -77,7 +77,17 @@ export default function Nav() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com/Masoud-Masoori/kya_website"
+            href="https://mas-ai.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex h-9 items-center gap-1.5 px-3 rounded-md text-[13px] text-slate-300 hover:text-white border border-white/10 hover:border-gold/30 hover:bg-gold/5 transition"
+            title="Parent company · MAS-AI Technologies Inc."
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-gold/70" />
+            mas-ai.co
+          </a>
+          <a
+            href="https://github.com/Mas-AI-Official/kYA_website"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex h-9 items-center px-3 rounded-md text-[13px] text-slate-300 hover:text-white border border-white/10 hover:border-white/20 hover:bg-white/5 transition"

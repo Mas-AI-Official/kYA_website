@@ -60,8 +60,15 @@ export default function Founder() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-full border border-gold/40 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                  <span className="text-gold text-2xl font-display">M</span>
+                <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-gold/40 shadow-[0_0_30px_-5px_rgba(212,168,67,0.5)] shrink-0">
+                  <Image
+                    src="/masoud.jpg"
+                    alt="Masoud Masoori, founder of MAS-AI Technologies Inc."
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <div>
                   <div className="text-white text-lg font-medium">Masoud Masoori</div>

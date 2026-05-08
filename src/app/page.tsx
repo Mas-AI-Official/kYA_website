@@ -1,6 +1,7 @@
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
+import TrustStrip from "@/components/sections/TrustStrip";
 import Problem from "@/components/sections/Problem";
 import Product from "@/components/sections/Product";
 import HowItWorks from "@/components/sections/HowItWorks";
@@ -20,6 +21,7 @@ export default function Home() {
       <Nav />
       <div className="relative z-10">
         <Hero />
+        <TrustStrip />
         <SectionDivider />
         <Problem />
         <SectionDivider />
