@@ -14,6 +14,9 @@ build/
 .claude/
 next-env.d.ts
 
-# Internal-only assets — never published to GitHub
+# Internal-only assets — never published to GitHub.
+# Leading slash anchors the pattern to repo root only — without it,
+# Windows-case-folded matching also excluded public/kya-logo.png.
 docs/
-KYA-LOGO.png
+/KYA-LOGO.png
+/masoud pic.jpg
