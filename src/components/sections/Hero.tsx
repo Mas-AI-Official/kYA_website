@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, PlayCircle } from "lucide-react";
-import MissionDashboard from "../MissionDashboard";
+import HeroVideo from "../HeroVideo";
 
 const trustChips = [
   "Apache 2.0 open protocol",
@@ -94,9 +94,9 @@ export default function Hero() {
             </motion.ul>
           </div>
 
-          {/* Right: dashboard */}
+          {/* Right: live product video (replaces the simulated dashboard). */}
           <div className="lg:col-span-7">
-            <MissionDashboard />
+            <HeroVideo />
           </div>
         </div>
 
