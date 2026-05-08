@@ -13,7 +13,7 @@ import {
 const items = [
   {
     icon: Fingerprint,
-    title: "Which agent is this — and who owns it?",
+    title: "Which agent is this, and who owns it?",
     body:
       "The internet was built for humans with cookies and CAPTCHAs. Agents need a portable, verifiable passport.",
     accent: "text-gold",
@@ -29,7 +29,7 @@ const items = [
     icon: Coins,
     title: "How much has it spent on what surfaces?",
     body:
-      "Tokens, dollars, time, API calls — all under one mission ledger with a deterministic hard-stop.",
+      "Tokens, dollars, time, API calls, all under one mission ledger with a deterministic hard-stop.",
     accent: "text-gold",
   },
   {
@@ -43,7 +43,7 @@ const items = [
     icon: HandCoins,
     title: "How do I stop it when it's stuck or wrong?",
     body:
-      "await checkpoint(reason, scope, signer) — a one-line escalation primitive. Five-second sign-off on phone.",
+      "await checkpoint(reason, scope, signer), a one-line escalation primitive. Five-second sign-off on phone.",
     accent: "text-gold",
   },
 ];
@@ -70,7 +70,7 @@ export default function Problem() {
           <p className="mt-5 text-slate-400 text-lg max-w-2xl leading-relaxed">
             Agents will access tools, customer data, APIs, wallets, marketplaces,
             and business workflows. Every CISO is about to ask the same five
-            questions — and existing infrastructure has no answer.
+            questions, and existing infrastructure has no answer.
           </p>
         </motion.div>
 

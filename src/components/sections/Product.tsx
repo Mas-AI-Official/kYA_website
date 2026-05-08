@@ -51,7 +51,7 @@ const features = [
   {
     icon: Stars,
     title: "Reputation & History",
-    body: "Cross-runtime reputation that travels with the agent — not the platform that hosts it.",
+    body: "Cross-runtime reputation that travels with the agent, not the platform that hosts it.",
   },
 ];
 

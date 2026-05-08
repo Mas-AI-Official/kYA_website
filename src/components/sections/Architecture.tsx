@@ -104,7 +104,7 @@ export default function Architecture() {
           </h2>
           <p className="mt-5 text-slate-400 text-lg leading-relaxed">
             KYA sits above the runtime. It doesn&apos;t replace your MCP gateway,
-            your wallet, or your API client — it wraps them in a single mission
+            your wallet, or your API client, it wraps them in a single mission
             envelope that travels with the agent.
           </p>
         </motion.div>

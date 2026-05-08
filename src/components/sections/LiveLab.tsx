@@ -72,7 +72,7 @@ const scenarios: Scenario[] = [
   {
     id: "no-passport",
     title: "No passport",
-    question: "Which agent is this — and who owns it?",
+    question: "Which agent is this, and who owns it?",
     body:
       "Rogue agent shows up without an Ed25519-signed credential. Identity check fails on the first hop. Mission never starts.",
     outcome: "block",
@@ -110,7 +110,7 @@ const scenarios: Scenario[] = [
     title: "High-risk action",
     question: "What needs a human signature?",
     body:
-      "External email send is in scope and under budget — but the risk classifier flags it irreversible. Mandatory checkpoint before dispatch.",
+      "External email send is in scope and under budget, but the risk classifier flags it irreversible. Mandatory checkpoint before dispatch.",
     outcome: "checkpoint",
     icon: AlertTriangle,
   },

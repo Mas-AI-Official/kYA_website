@@ -25,7 +25,7 @@ export default function Founder() {
           <p className="mt-5 text-slate-400 text-lg leading-relaxed">
             MAS-AI builds governed multi-agent systems for real-world operations.
             KYA Mission Control is designed from the same governance-first
-            thinking behind <span className="text-white">Daena</span> — identity,
+            thinking behind <span className="text-white">Daena</span>, identity,
             memory, auditability, accountable agent execution.
           </p>
         </motion.div>
@@ -51,7 +51,7 @@ export default function Founder() {
               <div className="relative aspect-square w-full max-w-[280px] mx-auto rounded-2xl overflow-hidden border border-gold/30 bg-black mb-7 shadow-glow-gold">
                 <Image
                   src="/kya-logo.png"
-                  alt="KYA Mission Control — Identity · Governance · Access · Powered by MAS-AI"
+                  alt="KYA Mission Control · Identity · Governance · Access · Powered by MAS-AI"
                   fill
                   sizes="(min-width: 1024px) 280px, 60vw"
                   className="object-cover"
@@ -146,7 +146,7 @@ export default function Founder() {
               Daena will be customer-zero of KYA from week one.
             </h3>
             <p className="mt-3 text-slate-400 leading-relaxed">
-              Daena is MAS-AI&apos;s governed multi-agent platform — 10 departments,
+              Daena is MAS-AI&apos;s governed multi-agent platform, 10 departments,
               60 capabilities per agent, a 10-stage governance pipeline,
               tiered NBMF memory, and production deployment on Cloud Run. Its
               10 departments will produce real KYA mission receipts on day one.

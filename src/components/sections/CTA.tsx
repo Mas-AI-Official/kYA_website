@@ -40,7 +40,7 @@ export default function CTA() {
       const json = await r.json().catch(() => ({}));
 
       if (r.status === 429) {
-        setErrorMsg("You just sent a request — please wait a minute before trying again.");
+        setErrorMsg("You just sent a request, please wait a minute before trying again.");
         setState("error");
         return;
       }
@@ -60,7 +60,7 @@ export default function CTA() {
         existing.push({ ...payload, ts: new Date().toISOString() });
         localStorage.setItem("kya_waitlist", JSON.stringify(existing));
       } catch {
-        /* private mode etc. — fine, server has it. */
+        /* private mode etc., fine, server has it. */
       }
 
       setState("success");
@@ -174,7 +174,7 @@ export default function CTA() {
                     />
                   </div>
                   <Field name="company" label="Company" placeholder="ACME Agents Inc." />
-                  {/* Honeypot — hidden from humans, bots fill it. */}
+                  {/* Honeypot, hidden from humans, bots fill it. */}
                   <div className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden" aria-hidden>
                     <label>
                       Website (do not fill)
@@ -193,7 +193,7 @@ export default function CTA() {
                     <textarea
                       name="use_case"
                       rows={4}
-                      placeholder="e.g. Procurement agent that handles SaaS renewals — need audit trail before our enterprise pilot."
+                      placeholder="e.g. Procurement agent that handles SaaS renewals, need audit trail before our enterprise pilot."
                       className="w-full rounded-lg bg-slate-900/60 border border-white/10 focus:border-gold/40 focus:bg-slate-900 outline-none px-3.5 py-2.5 text-[13.5px] text-white placeholder:text-slate-600 transition"
                     />
                   </div>

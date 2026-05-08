@@ -112,7 +112,7 @@ const auditEvents = [
   { t: "00:03", e: "5 child certificates issued", c: "text-teal" },
   { t: "00:18", e: "Surface route → MCP[notion]", c: "text-slate-300" },
   { t: "00:22", e: "Policy gate: PASS", c: "text-signal-green" },
-  { t: "00:26", e: "Vendor returned +12% — flag", c: "text-signal-amber" },
+  { t: "00:26", e: "Vendor returned +12%, flag", c: "text-signal-amber" },
   { t: "00:30", e: "CHECKPOINT_PENDING → human", c: "text-signal-blue" },
   { t: "00:35", e: "Human signed: counter @ 8%", c: "text-signal-green" },
   { t: "00:55", e: "Receipt issued · Ed25519 ✓", c: "text-gold" },

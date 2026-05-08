@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "edge";
 
 /**
- * Waitlist intake — provider-agnostic.
+ * Waitlist intake, provider-agnostic.
  *
  * Always:
  *   - Validates payload, basic anti-spam (honeypot + rate-limit by IP).
@@ -20,7 +20,7 @@ export const runtime = "edge";
  *
  * Never:
  *   - Stores secrets in code.
- *   - Throws on missing optional providers — the form still succeeds.
+ *   - Throws on missing optional providers, the form still succeeds.
  */
 
 type Payload = {
@@ -28,13 +28,13 @@ type Payload = {
   email: string;
   company?: string;
   use_case?: string;
-  /** Honeypot — must be empty. Real users never fill this. */
+  /** Honeypot, must be empty. Real users never fill this. */
   website?: string;
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// In-memory rate limit (best-effort across one Edge instance — fine for low volume).
+// In-memory rate limit (best-effort across one Edge instance, fine for low volume).
 const lastHit = new Map<string, number>();
 const WINDOW_MS = 60_000; // 1 submission / IP / minute
 
@@ -130,7 +130,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "invalid_json" }, { status: 400 });
   }
 
-  // Honeypot — bots fill hidden fields. Pretend to succeed and don't burn a slot.
+  // Honeypot, bots fill hidden fields. Pretend to succeed and don't burn a slot.
   if (body.website && body.website.length > 0) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
@@ -147,7 +147,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "invalid_email" }, { status: 400 });
   }
 
-  // Rate-limit only after the request looks legitimate — bad input shouldn't lock a user out.
+  // Rate-limit only after the request looks legitimate, bad input shouldn't lock a user out.
   const ip = clientIp(req);
   const now = Date.now();
   const last = lastHit.get(ip) || 0;
@@ -161,7 +161,7 @@ export async function POST(req: NextRequest) {
   const payload: Payload = { name, email, company, use_case };
   lastHit.set(ip, now);
 
-  // Structured log line — Vercel surfaces this in Logs.
+  // Structured log line, Vercel surfaces this in Logs.
   console.log(
     JSON.stringify({
       kind: "waitlist.signup",

@@ -57,7 +57,7 @@ export default function WhyNow() {
           </h2>
           <p className="mt-5 text-slate-400 text-lg leading-relaxed">
             Three forces are converging in 2026. The wire-level standards are
-            settling fast. The application-layer noun — the Mission — is still
+            settling fast. The application-layer noun, the Mission, is still
             missing.
           </p>
         </motion.div>

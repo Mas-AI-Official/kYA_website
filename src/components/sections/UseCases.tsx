@@ -38,7 +38,7 @@ const cases = [
   {
     icon: Handshake,
     title: "Customer-agent transaction platforms",
-    body: "Freelance agents acting on a customer&apos;s behalf — with provable scope, receipts, and dispute trail.",
+    body: "Freelance agents acting on a customer&apos;s behalf, with provable scope, receipts, and dispute trail.",
     badge: "Marketplaces",
   },
   {

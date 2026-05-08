@@ -34,7 +34,7 @@ export default function AnimatedBackground() {
   const gridY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const scanY = useTransform(scrollYProgress, [0, 1], ["0vh", "100vh"]);
 
-  // Cursor spotlight — raw mouse coords smoothed with a lazy spring
+  // Cursor spotlight, raw mouse coords smoothed with a lazy spring
   // for that premium "the page is following you" feel.
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
@@ -44,7 +44,7 @@ export default function AnimatedBackground() {
   const spotlightY = useTransform(springY, (v) => `${v * 100}%`);
 
   // Pre-compute both spotlight gradient strings at the top level (hooks must
-  // not be called conditionally — these are always computed, used or not).
+  // not be called conditionally, these are always computed, used or not).
   const spotlightGold = useTransform(
     [spotlightX, spotlightY] as never,
     ([x, y]: string[]) =>
@@ -159,7 +159,7 @@ export default function AnimatedBackground() {
         </motion.div>
       )}
 
-      {/* 5. Cursor-reactive spotlight — premium "page is alive" feel.
+      {/* 5. Cursor-reactive spotlight, premium "page is alive" feel.
             On touch devices the springs settle at center (50%, 50%) and stay there. */}
       {mounted && !reduceMotion && (
         <motion.div
@@ -174,7 +174,7 @@ export default function AnimatedBackground() {
         />
       )}
 
-      {/* 6. Network pulse — fixed-position SVG nodes with traveling pulses.
+      {/* 6. Network pulse, fixed-position SVG nodes with traveling pulses.
             Renders only while the user is near the top of the page (visible
             in hero/architecture viewport). */}
       {mounted && !reduceMotion && <NetworkPulse />}
@@ -249,7 +249,7 @@ function NetworkPulse() {
         />
       ))}
 
-      {/* traveling pulse along each edge — staggered offsets
+      {/* traveling pulse along each edge, staggered offsets
           create the continuous "missions are running" feel. */}
       {edges.map(([a, b, delay], i) => {
         const ax = lookup[a].x;
@@ -283,7 +283,7 @@ function NetworkPulse() {
         </g>
       ))}
 
-      {/* per-edge keyframe animations — defined once, reused.
+      {/* per-edge keyframe animations, defined once, reused.
           Length-aware dashoffset gives smooth travel regardless of edge length. */}
       <style>{`
         ${edges

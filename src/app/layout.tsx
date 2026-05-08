@@ -14,7 +14,7 @@ const fontVars: React.CSSProperties = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kya.mas-ai.co"),
-  title: "KYA Mission Control — Trust infrastructure for autonomous AI agents",
+  title: "KYA Mission Control · Trust infrastructure for autonomous AI agents",
   description:
     "KYA Mission Control verifies who owns an agent, what it is allowed to do, and creates an auditable record before it acts, spends, transacts, or represents a business.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MAS-AI Technologies Inc." }],
   openGraph: {
-    title: "KYA Mission Control — Trust infrastructure for autonomous AI agents",
+    title: "KYA Mission Control · Trust infrastructure for autonomous AI agents",
     description:
       "Birth certificate to signed receipt. Cross-runtime, cross-surface. Live Mission Lab on Cloud Run with 9 interactive scenarios.",
     type: "website",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "/kya-logo.png",
         width: 1200,
         height: 1200,
-        alt: "KYA Mission Control — Identity · Governance · Access · Powered by MAS-AI",
+        alt: "KYA Mission Control · Identity · Governance · Access · Powered by MAS-AI",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "KYA Mission Control",
     description:
-      "Trust infrastructure for autonomous AI agents. Identity, permissions, audit — before they act. Live demo on Cloud Run.",
+      "Trust infrastructure for autonomous AI agents. Identity, permissions, and audit before they act. Live demo on Cloud Run.",
     images: ["/kya-logo.png"],
   },
   icons: {
