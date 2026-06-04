@@ -63,6 +63,82 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+// JSON-LD entity graph for AI search (ChatGPT, Perplexity, Claude, Gemini) and
+// Google rich results. Stable @id values link KYA to the shared MAS-AI
+// Organization entity (https://mas-ai.co/#organization) and to its sibling
+// product Daena — cross-property entity linking raises AI citation probability.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mas-ai.co/#organization",
+      name: "MAS-AI Technologies Inc.",
+      alternateName: ["MAS-AI", "MAS-AI Technologies"],
+      url: "https://mas-ai.co",
+      sameAs: [
+        "https://github.com/Mas-AI-Official",
+        "https://www.linkedin.com/in/masoud-masoori",
+        "https://daena.mas-ai.co",
+      ],
+    },
+    {
+      "@type": ["SoftwareApplication", "Product"],
+      "@id": "https://kya.mas-ai.co/#kya",
+      name: "KYA Mission Control",
+      alternateName: ["KYA", "Know Your Agent"],
+      applicationCategory: "SecurityApplication",
+      applicationSubCategory: "AI agent identity, governance, and audit",
+      operatingSystem: "Cloud (Google Cloud Run), self-hostable",
+      url: "https://kya.mas-ai.co",
+      image: "https://kya.mas-ai.co/kya-logo.png",
+      description:
+        "KYA Mission Control verifies who owns an AI agent, what it is allowed to do, and creates an auditable, offline-verifiable record before the agent acts, spends, transacts, or represents a business. Birth certificate to signed receipt across MCP, APIs, browsers, and payment rails.",
+      slogan:
+        "Other tools control a tool call. We control the whole mission lifecycle.",
+      creator: { "@id": "https://mas-ai.co/#organization" },
+      publisher: { "@id": "https://mas-ai.co/#organization" },
+      featureList: [
+        "Agent identity registry",
+        "Ownership verification",
+        "Permission policies",
+        "Risk scoring",
+        "Audit logs",
+        "Compliance reports",
+        "Platform API",
+        "Agent reputation",
+        "Ed25519-signed receipts",
+        "RFC 9421 HTTP Message Signatures",
+        "Offline receipt verification",
+      ],
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/PreOrder",
+        description: "Live Mission Lab demo on Google Cloud Run; waitlist open.",
+      },
+      isRelatedTo: {
+        "@type": "SoftwareApplication",
+        name: "Daena",
+        url: "https://daena.mas-ai.co",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kya.mas-ai.co/#website",
+      name: "KYA Mission Control",
+      url: "https://kya.mas-ai.co",
+      publisher: { "@id": "https://mas-ai.co/#organization" },
+      about: { "@id": "https://kya.mas-ai.co/#kya" },
+      inLanguage: "en-US",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -73,6 +149,10 @@ export default function RootLayout({
   return (
     <html lang="en" style={fontVars}>
       <body className="font-sans antialiased text-slate-300 selection:bg-gold/30">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

@@ -1,0 +1,113 @@
+# ─────────────────────────────────────────────────────────────────────────
+# robots.txt for KYA Mission Control (kya.mas-ai.co)
+# Maintained: 2026-06-04 · Stance: AEO/GEO-forward (citation-first)
+#
+# We ALLOW every major crawler class explicitly. The bots that place our
+# canonical text into ChatGPT / Claude / Perplexity / Google AI answers
+# (OAI-SearchBot, ChatGPT-User, Claude-User, Claude-SearchBot, PerplexityBot,
+# Googlebot) are different from training-only crawlers (GPTBot, ClaudeBot,
+# CCBot). Goal: when a human asks "what is KYA Mission Control", the LLM's
+# answer uses OUR words. IP protection lives upstream of this file.
+# ─────────────────────────────────────────────────────────────────────────
+
+Sitemap: https://kya.mas-ai.co/sitemap.xml
+
+# ─── Default: everything allowed ───
+User-agent: *
+Allow: /
+
+# ─── Classic search engines ───
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ─── Google AI (Gemini + AI Overviews) ───
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# ─── OpenAI (ChatGPT search + live fetch + training) ───
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# ─── Anthropic (Claude) — 2025 triad ───
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Legacy Anthropic strings (harmless, belt-and-suspenders)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# ─── Perplexity ───
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ─── Apple Intelligence ───
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ─── Amazon / Alexa+ ───
+User-agent: Amazonbot
+Allow: /
+
+# ─── Meta AI ───
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ─── You.com ───
+User-agent: YouBot
+Allow: /
+
+# ─── DuckDuckGo AI assist ───
+User-agent: DuckAssistBot
+Allow: /
+
+# ─── Cohere ───
+User-agent: cohere-ai
+Allow: /
+
+# ─── Common Crawl (feeds most open LLMs) ───
+User-agent: CCBot
+Allow: /
+
+# ─── ByteDance (Doubao, TikTok search) ───
+User-agent: Bytespider
+Allow: /
+
+# ─── Mistral ───
+User-agent: MistralAI-User
+Allow: /
