@@ -57,9 +57,11 @@ export default function AnimatedBackground() {
   );
 
   useEffect(() => {
-    setMounted(true);
     const m = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduceMotion(m.matches);
+    const initialStateFrame = window.requestAnimationFrame(() => {
+      setMounted(true);
+      setReduceMotion(m.matches);
+    });
     const onChange = (e: MediaQueryListEvent) => setReduceMotion(e.matches);
     m.addEventListener("change", onChange);
 
@@ -70,6 +72,7 @@ export default function AnimatedBackground() {
     window.addEventListener("pointermove", onMove, { passive: true });
 
     return () => {
+      window.cancelAnimationFrame(initialStateFrame);
       window.removeEventListener("pointermove", onMove);
       m.removeEventListener("change", onChange);
     };
@@ -237,7 +240,7 @@ function NetworkPulse() {
       </defs>
 
       {/* edges (faint static guide) */}
-      {edges.map(([a, b, _delay], i) => (
+      {edges.map(([a, b], i) => (
         <line
           key={`e-${i}`}
           x1={lookup[a].x}
