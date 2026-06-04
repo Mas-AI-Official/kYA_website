@@ -17,6 +17,10 @@ updates:
           - eslint-config-next
       tooling:
         dependency-type: development
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
   - package-ecosystem: github-actions
     directory: /
     schedule:
