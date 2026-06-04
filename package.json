@@ -15,9 +15,9 @@
     "gcp:deploy:remote": "gcloud builds submit --config=cloudbuild.yaml --substitutions=SHORT_SHA=$(git rev-parse --short HEAD)"
   },
   "dependencies": {
-    "next": "14.2.18",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "16.2.7",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
     "clsx": "^2.1.1",
@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.2.16",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.18",
+    "eslint-config-next": "16.2.7",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
