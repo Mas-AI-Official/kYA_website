@@ -6,6 +6,7 @@ import Problem from "@/components/sections/Problem";
 import Product from "@/components/sections/Product";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Architecture from "@/components/sections/Architecture";
+import Identity from "@/components/sections/Identity";
 import LiveLab from "@/components/sections/LiveLab";
 import UseCases from "@/components/sections/UseCases";
 import WhyNow from "@/components/sections/WhyNow";
@@ -30,6 +31,8 @@ export default function Home() {
         <HowItWorks />
         <SectionDivider />
         <Architecture />
+        <SectionDivider />
+        <Identity />
         <SectionDivider />
         <LiveLab />
         <SectionDivider />

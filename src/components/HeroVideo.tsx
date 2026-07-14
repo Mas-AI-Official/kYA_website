@@ -106,7 +106,7 @@ export default function HeroVideo() {
           </a>
         </div>
 
-        {/* Caption bar — explains what the viewer is watching, in one line */}
+        {/* Caption bar: explains what the viewer is watching, in one line */}
         <div className="border-t border-white/5 bg-slate-900/60 px-4 py-2.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px]">
           <span className="inline-flex items-center gap-1.5 text-slate-300">
             <CircleDot className="h-3 w-3 text-gold" />
@@ -128,7 +128,7 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      {/* Mobile-only summary line below the frame — text in the video is
+      {/* Mobile-only summary line below the frame: text in the video is
           tiny on phones, so we restate the value in plain copy. */}
       <p className="mt-4 text-center text-[12.5px] text-slate-400 sm:hidden">
         <Maximize2 className="inline h-3 w-3 mr-1 align-text-bottom" />

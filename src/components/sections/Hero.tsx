@@ -5,10 +5,10 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import HeroVideo from "../HeroVideo";
 
 const trustChips = [
-  "Apache 2.0 open protocol",
+  "Apache 2.0 open spec",
   "Cross-runtime: Claude · GPT · Gemini · Llama",
-  "Ed25519-signed receipts",
-  "No vendor lock-in",
+  "Receipts as W3C Verifiable Credentials",
+  "No native token. No lock-in.",
 ];
 
 export default function Hero() {
@@ -40,8 +40,8 @@ export default function Hero() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
               className="mt-6 font-display text-4xl sm:text-5xl lg:text-[56px] leading-[1.05] tracking-tight text-white"
             >
-              Trust infrastructure for{" "}
-              <span className="text-gradient-gold">autonomous AI agents</span>.
+              Prove what your{" "}
+              <span className="text-gradient-gold">AI agent actually did</span>.
             </motion.h1>
 
             <motion.p
@@ -50,9 +50,11 @@ export default function Hero() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="mt-6 text-[17px] leading-relaxed text-slate-400 max-w-xl"
             >
-              KYA Mission Control verifies who owns an agent, what it is allowed
-              to do, and creates an auditable record before it acts, spends,
-              transacts, or represents a business.
+              KYA Mission Control turns every autonomous agent run into a
+              signed, verifiable Mission Receipt: what it was allowed to do,
+              what it actually did, and what it spent. Portable proof an
+              auditor, a regulator, or a customer can check tomorrow, across
+              any runtime.
             </motion.p>
 
             <motion.div

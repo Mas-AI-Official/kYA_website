@@ -20,13 +20,15 @@ export default function Founder() {
             Built by MAS-AI Technologies Inc.
           </div>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight text-white">
-            Governance-first thinking, already shipping in production.
+            Governance-first thinking, proven in production with Daena.
           </h2>
           <p className="mt-5 text-slate-400 text-lg leading-relaxed">
             MAS-AI builds governed multi-agent systems for real-world operations.
             KYA Mission Control is designed from the same governance-first
             thinking behind <span className="text-white">Daena</span>, identity,
-            memory, auditability, accountable agent execution.
+            memory, auditability, accountable agent execution. KYA itself is
+            pre-seed and in private beta: no outside funding, no paying
+            customers yet, and we will not pretend otherwise.
           </p>
         </motion.div>
 

@@ -14,6 +14,11 @@ const headers = [
 
 const rows: { capability: string; cells: [Cell, Cell, Cell, Cell]; note?: string }[] = [
   {
+    capability: "Operator presence proof at authorization",
+    cells: ["yes", "partial", "no", "no"],
+    note: "Fresh FIDO2 passkey step-up per mission. AgentCore binds a user id but delegates presence to the IdP",
+  },
+  {
     capability: "Cross-runtime portable identity",
     cells: ["yes", "no", "yes", "yes"],
     note: "AWS-locked / wire-only / on-chain only",

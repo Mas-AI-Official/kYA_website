@@ -19,8 +19,8 @@ const columns = [
     accent: "teal",
     eyebrow: "Distribution moment",
     items: [
-      ["a16z Speedrun SR007", "Agent-native infra wave"],
-      ["a16z crypto", "Adopting Know Your Agent framing"],
+      ["Agent-native infra wave", "Speedrun-class funding flowing in"],
+      ["a16z crypto", "Publicly using Know Your Agent framing"],
       ["Voice + browser agents", "Going full lifecycle in prod"],
     ],
   },
@@ -53,7 +53,7 @@ export default function WhyNow() {
           </div>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight text-white">
             The agent economy needs an{" "}
-            <span className="text-gradient-gold">identity layer</span>.
+            <span className="text-gradient-gold">accountability layer</span>.
           </h2>
           <p className="mt-5 text-slate-400 text-lg leading-relaxed">
             Three forces are converging in 2026. The wire-level standards are
